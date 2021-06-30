@@ -14,6 +14,10 @@ extension String {
         return self.trimmingCharacters(in: .whitespaces) == String() ? true : false
     }
     
+    var isNumeric: Bool {
+        return self.trimmingCharacters(in: .letters) != String() ? true : false
+    }
+    
     var data: Data? {
         guard let url = URL(string: self) else { return nil }
         guard let data = try? Data(contentsOf: url) else { return nil }

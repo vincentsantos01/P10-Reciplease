@@ -42,11 +42,10 @@ class RecipesSearchViewController: UIViewController {
         getRecipes()
     }
     
-    
     func addIngredient() {
         guard let ingredientName = searchTextField.text else { return }
-        if ingredientName.isBlank {
-            presentAlert(titre: "oups", message: "Nothing to add to the list")
+        if ingredientName.isBlank || ingredientName.isNumeric {
+            presentAlert(titre: "oups", message: "Whitespace or digital character is not possible")
         } else {
             ingredients.append(ingredientName)
         }
