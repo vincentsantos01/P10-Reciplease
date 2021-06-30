@@ -12,7 +12,9 @@ class RecipesSearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var ingredientsTableView: UITableView! { didSet { ingredientsTableView.tableFooterView = UIView() }}
     @IBOutlet weak var searchButton: UIButton!
-
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
+    
     
 
     var recipeService = RecipeService()
@@ -23,7 +25,7 @@ class RecipesSearchViewController: UIViewController {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
-        
+        styles()
     }
     
     @IBAction func addButton(_ sender: UIButton) {
@@ -54,6 +56,15 @@ class RecipesSearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let recipesList = segue.destination as? RecipesTableViewController else { return }
         recipesList.recipeData = recipeData
+    }
+    
+    func styles() {
+        searchButton.layer.cornerRadius = 10
+        searchButton.clipsToBounds = true
+        addButton.layer.cornerRadius = 10
+        addButton.clipsToBounds = true
+        clearButton.layer.cornerRadius = 10
+        clearButton.clipsToBounds = true
     }
     
    

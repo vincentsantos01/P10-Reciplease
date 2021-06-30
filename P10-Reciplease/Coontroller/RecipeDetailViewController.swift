@@ -29,6 +29,9 @@ class RecipeDetailViewController: UIViewController {
         let coredataStack = appdelegate.coreDataStack
         coreDataManager = CoreDataManager(coreDataStack: coredataStack)
         updateRecipe()
+        directionsButton.layer.cornerRadius = 20
+        recipeImageView.layer.cornerRadius = 40
+        
     }
     
 
