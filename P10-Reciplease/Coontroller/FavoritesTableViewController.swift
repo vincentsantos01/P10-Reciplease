@@ -30,7 +30,7 @@ class FavoritesTableViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
           favoriteTableView.reloadData()
-       // print(coreDataManager?.favoritesRecipe.first?.totalTime)
+        print(coreDataManager?.favoritesRecipe.first?.totalTime)
       }
     
 
@@ -90,6 +90,6 @@ extension FavoritesTableViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 200
     }
 }

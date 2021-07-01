@@ -25,7 +25,7 @@ class RecipeTableViewCell: UITableViewCell {
             cookingTimeLabel.text = recipe?.recipe.totalTime.timeFormater()
             let score = recipe?.recipe.yield
             if score == 0 {
-                yieldLabel.text = ""
+                yieldLabel.text = "?"
             } else {
                 yieldLabel.text = "\(score ?? 0) people"
             }

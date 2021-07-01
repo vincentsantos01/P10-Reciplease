@@ -47,10 +47,10 @@ final class CoreDataManager {
         coreDataStack.saveContext()
     }
     
-    func deleteAllFavorites() {
-        favoritesRecipe.forEach { managedObjectContext.delete($0) }
-        coreDataStack.saveContext()
-    }
+    //func deleteAllFavorites() {
+        //favoritesRecipe.forEach { managedObjectContext.delete($0) }
+        //coreDataStack.saveContext()
+    //}
     
     func recipeIsAlreadyInFavorite(name: String) -> Bool {
         let request: NSFetchRequest<FavoritesList> = FavoritesList.fetchRequest()

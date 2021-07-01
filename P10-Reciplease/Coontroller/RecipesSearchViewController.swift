@@ -125,16 +125,5 @@ extension RecipesSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return ingredients.isEmpty ? 200 : 0
     }
-}
 
-
-extension RecipesSearchViewController: UITextFieldDelegate {
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        searchTextField.resignFirstResponder()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchTextField.resignFirstResponder()
-        return true
-    }
 }
