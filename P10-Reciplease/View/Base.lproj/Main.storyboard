@@ -13,10 +13,13 @@
         <scene sceneID="0ee-ha-kly">
             <objects>
                 <viewController interfaceStyle="dark" id="HQ0-Oo-XdX" customClass="FavoritesTableViewController" customModule="P10_Reciplease" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UWR-6V-kVS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="2" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="UWR-6V-kVS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="HQ0-Oo-XdX" id="hy6-4V-4Nb"/>
                             <outlet property="delegate" destination="HQ0-Oo-XdX" id="lbN-U7-591"/>
@@ -294,7 +297,6 @@
                                 <rect key="frame" x="7" y="374" width="265" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="7jK-fI-8OX"/>
-                                    <constraint firstAttribute="width" constant="265" id="X5L-RL-77Y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -310,7 +312,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-T4-z2V">
-                                <rect key="frame" x="362" y="387" width="45" height="20"/>
+                                <rect key="frame" x="344" y="387" width="63" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="WYS-t3-dGP"/>
                                 </constraints>
@@ -322,11 +324,13 @@
                         <viewLayoutGuide key="safeArea" id="lGQ-72-3sa"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ehu-T4-z2V" firstAttribute="leading" secondItem="lGQ-72-3sa" secondAttribute="leading" constant="344" id="5Uu-rQ-mt4"/>
                             <constraint firstItem="NF5-YE-l1W" firstAttribute="centerX" secondItem="ei6-eN-bwo" secondAttribute="centerX" id="5Y7-6j-tmF"/>
                             <constraint firstItem="nET-fY-Syl" firstAttribute="top" secondItem="lGQ-72-3sa" secondAttribute="top" constant="8" id="Ci7-dq-WhD"/>
                             <constraint firstItem="lGQ-72-3sa" firstAttribute="bottom" secondItem="Tb4-j9-k1b" secondAttribute="bottom" constant="378" id="FOr-Ai-cFa"/>
                             <constraint firstItem="nET-fY-Syl" firstAttribute="centerX" secondItem="ei6-eN-bwo" secondAttribute="centerX" id="FfN-qU-qJV"/>
                             <constraint firstItem="lGQ-72-3sa" firstAttribute="trailing" secondItem="Ffg-Pr-xnp" secondAttribute="trailing" constant="7" id="S1C-zr-Uxn"/>
+                            <constraint firstItem="lGQ-72-3sa" firstAttribute="trailing" secondItem="Tb4-j9-k1b" secondAttribute="trailing" constant="142" id="Si1-3a-zui"/>
                             <constraint firstItem="Tb4-j9-k1b" firstAttribute="leading" secondItem="lGQ-72-3sa" secondAttribute="leading" constant="7" id="Vaw-Qp-FDs"/>
                             <constraint firstItem="lGQ-72-3sa" firstAttribute="bottom" secondItem="Ffg-Pr-xnp" secondAttribute="bottom" constant="384" id="Xio-e5-oaz"/>
                             <constraint firstAttribute="trailing" secondItem="nET-fY-Syl" secondAttribute="trailing" constant="50" id="YbJ-ae-Jwz"/>
@@ -428,7 +432,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dqi-dn-gHC"/>
+        <segue reference="7tR-69-qN8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="favorite" width="25" height="25"/>

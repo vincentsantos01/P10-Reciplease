@@ -21,7 +21,7 @@ class RecipeTableViewCell: UITableViewCell {
             guard let url = URL(string: recipe?.recipe.image ?? "recipe picture") else {return}
             recipeImageView.load(url: url)
             recipeTitle.text = recipe?.recipe.label
-            recipeIngredients.text = recipe?.recipe.ingredients[0].text
+            //recipeIngredients.text = recipe?.recipe.ingredients[0].text
             cookingTimeLabel.text = recipe?.recipe.totalTime.timeFormater()
             let score = recipe?.recipe.yield
             if score == 0 {
@@ -37,8 +37,8 @@ class RecipeTableViewCell: UITableViewCell {
             guard let image = favoriteRecipe?.image else { return }
             recipeImageView.image = UIImage(data: image)
             recipeTitle.text = favoriteRecipe?.name
-            guard let ingredient = favoriteRecipe?.ingredients?.joined(separator: ",") else { return }
-            recipeIngredients.text = "\(ingredient)"
+            //guard let ingredient = favoriteRecipe?.ingredients?.joined(separator: ",") else { return }
+            //recipeIngredients.text = "\(ingredient)"
             guard let time = Int(favoriteRecipe?.totalTime ?? "") else { return }
             cookingTimeLabel.text = "\(time.timeFormater())"
             guard let score = favoriteRecipe?.score else { return }
