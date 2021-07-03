@@ -74,16 +74,22 @@ class RecipeDetailViewController: UIViewController {
     }
     
     @IBAction func favoriteButton(_ sender: UIBarButtonItem) {
+ 
         if coreDataManager?.recipeIsAlreadyInFavorite(name: recipeRepresentable?.name ?? "") == true {
             deleteRecipeFromFavorites()
             favoriteButton.image = UIImage(named: "favorite")
-            navigationController?.popToRootViewController(animated: true)// que sur ecran favori
+            if tabBarController?.selectedIndex == 1 {
+                navigationController?.popToRootViewController(animated: true)
+                
+            }// else {
+               // presentAlert(titre: "pas marché", message: "essaye encore")
+           // }
         } else {
             addRecipeToFavorite()
             favoriteButton.image = UIImage(named: "favoriteok")
         }
     }
-    
+
     
 }
 

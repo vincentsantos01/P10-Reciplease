@@ -40,7 +40,6 @@ class RecipeTableViewCell: UITableViewCell {
 
         //guard let time = Int(favoriteRecipe?.totalTime ?? "") else { return }
             guard let time = favoriteRecipe?.totalTime else { return }
-            print("******",time)
             cookingTimeLabel.text = "\(time)"
             guard let score = favoriteRecipe?.score else { return }
             yieldLabel.text = "\(score)"
