@@ -43,11 +43,11 @@ class CoreDataManagerTests: XCTestCase {
         XCTAssertTrue(coreDataManager.favoritesRecipe[0].name! == "Blueberry Cocoa Crumble")
     }
     
-    func testDeleteAllRecipesFromFavoriteMethod_WhenEntitiesAreDeleted_ThenShouldedCorrectlyDeleted() {
+    /*func testDeleteAllRecipesFromFavoriteMethod_WhenEntitiesAreDeleted_ThenShouldedCorrectlyDeleted() {
         coreDataManager.addToFavoriteList(name: "Pani Puri", ingredients: [""], totalTime: "0", score: "2", recipeUrl: "https://food52.com/recipes/85943-best-pani-puri-recipe", image: Data())
         coreDataManager.deleteAllFavorites()
         XCTAssertTrue(coreDataManager.favoritesRecipe.isEmpty)
-    }
+    }*/
     
     func testRecipeIsAlreadyInFavoritesMethod_WhenEntityAlreadyExists_ThenShouldReturnTrue() {
         coreDataManager.addToFavoriteList(name: "Pani Puri", ingredients: [""], totalTime: "0", score: "2", recipeUrl: "https://food52.com/recipes/85943-best-pani-puri-recipe", image: Data())

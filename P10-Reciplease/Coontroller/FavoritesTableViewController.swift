@@ -30,7 +30,7 @@ class FavoritesTableViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
           favoriteTableView.reloadData()
-        print(coreDataManager?.favoritesRecipe.first?.totalTime)
+        //print(coreDataManager?.favoritesRecipe.first?.totalTime)
       }
     
 

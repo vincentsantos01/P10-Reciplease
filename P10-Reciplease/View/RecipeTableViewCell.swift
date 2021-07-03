@@ -37,10 +37,11 @@ class RecipeTableViewCell: UITableViewCell {
             guard let image = favoriteRecipe?.image else { return }
             recipeImageView.image = UIImage(data: image)
             recipeTitle.text = favoriteRecipe?.name
-            //guard let ingredient = favoriteRecipe?.ingredients?.joined(separator: ",") else { return }
-            //recipeIngredients.text = "\(ingredient)"
-            guard let time = Int(favoriteRecipe?.totalTime ?? "") else { return }
-            cookingTimeLabel.text = "\(time.timeFormater())"
+
+        //guard let time = Int(favoriteRecipe?.totalTime ?? "") else { return }
+            guard let time = favoriteRecipe?.totalTime else { return }
+            print("******",time)
+            cookingTimeLabel.text = "\(time)"
             guard let score = favoriteRecipe?.score else { return }
             yieldLabel.text = "\(score)"
         }

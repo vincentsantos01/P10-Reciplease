@@ -77,7 +77,7 @@ class RecipeDetailViewController: UIViewController {
         if coreDataManager?.recipeIsAlreadyInFavorite(name: recipeRepresentable?.name ?? "") == true {
             deleteRecipeFromFavorites()
             favoriteButton.image = UIImage(named: "favorite")
-            navigationController?.popToRootViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)// que sur ecran favori
         } else {
             addRecipeToFavorite()
             favoriteButton.image = UIImage(named: "favoriteok")
