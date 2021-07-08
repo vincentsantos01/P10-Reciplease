@@ -96,7 +96,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="URL" keyboardAppearance="alert" returnKeyType="continue" textContentType="name"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos Ingrédients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M11-KI-SzG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M11-KI-SzG">
                                 <rect key="frame" x="20" y="239" width="188" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -181,7 +181,7 @@
                             <constraint firstItem="TGN-Nm-jDc" firstAttribute="leading" secondItem="r4f-3N-YWM" secondAttribute="leading" constant="20" id="ygU-SW-zJ2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Trouvez votre recette" id="M6m-af-Bbu"/>
+                    <navigationItem key="navigationItem" id="M6m-af-Bbu"/>
                     <connections>
                         <outlet property="addButton" destination="hYt-fi-Niy" id="m3V-HZ-gPh"/>
                         <outlet property="clearButton" destination="A1A-ev-ojZ" id="Nnl-Y9-9kX"/>
@@ -303,7 +303,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 personnes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffg-Pr-xnp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffg-Pr-xnp">
                                 <rect key="frame" x="307" y="325" width="61" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="wL3-pk-kVJ"/>
@@ -312,8 +312,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-T4-z2V">
-                                <rect key="frame" x="344" y="303" width="24" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-T4-z2V">
+                                <rect key="frame" x="307" y="303" width="61" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="WYS-t3-dGP"/>
                                 </constraints>
@@ -325,7 +325,7 @@
                         <viewLayoutGuide key="safeArea" id="lGQ-72-3sa"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ehu-T4-z2V" firstAttribute="leading" secondItem="lGQ-72-3sa" secondAttribute="leading" constant="344" id="5Uu-rQ-mt4"/>
+                            <constraint firstItem="ehu-T4-z2V" firstAttribute="leading" secondItem="lGQ-72-3sa" secondAttribute="leading" constant="307" id="5Uu-rQ-mt4"/>
                             <constraint firstItem="NF5-YE-l1W" firstAttribute="centerX" secondItem="ei6-eN-bwo" secondAttribute="centerX" id="5Y7-6j-tmF"/>
                             <constraint firstItem="nET-fY-Syl" firstAttribute="top" secondItem="lGQ-72-3sa" secondAttribute="top" constant="8" id="Ci7-dq-WhD"/>
                             <constraint firstItem="lGQ-72-3sa" firstAttribute="bottom" secondItem="Tb4-j9-k1b" secondAttribute="bottom" constant="378" id="FOr-Ai-cFa"/>
@@ -366,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgN-wF-AW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5034.7826086956529" y="-269.19642857142856"/>
+            <point key="canvasLocation" x="5034.3999999999996" y="-269.70443349753697"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6Qg-6m-V3I">
@@ -435,7 +435,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7tR-69-qN8"/>
+        <segue reference="dqi-dn-gHC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="favorite" width="25" height="25"/>

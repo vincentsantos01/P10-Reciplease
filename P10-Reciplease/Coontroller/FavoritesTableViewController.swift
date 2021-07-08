@@ -9,10 +9,10 @@ import UIKit
 
 class FavoritesTableViewController: UIViewController {
     
-
+    
     @IBOutlet weak var favoriteTableView: UITableView! { didSet { favoriteTableView.tableFooterView = UIView() }}
     
-
+    
     
     var coreDataManager: CoreDataManager?
     var recipeDetail: Recipe?
@@ -29,16 +29,15 @@ class FavoritesTableViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-          favoriteTableView.reloadData()
-        //print(coreDataManager?.favoritesRecipe.first?.totalTime)
-      }
+        favoriteTableView.reloadData()
+    }
     
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let recipeVC = segue.destination as? RecipeDetailViewController else { return }
         recipeVC.recipeRepresentable = recipeRepresentable
     }
-
+    
 }
 
 

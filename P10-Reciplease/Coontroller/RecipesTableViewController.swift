@@ -10,20 +10,20 @@ import UIKit
 
 class RecipesTableViewController: UIViewController {
     
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     
     var recipeDetail: Recipe?
     var recipeData: RecipeData?
     var recipeRepresentable: RecipeRepresentable?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "RecipeCell")
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let recipeVC = segue.destination as? RecipeDetailViewController else { return }
         recipeVC.recipeRepresentable = recipeRepresentable
@@ -45,7 +45,7 @@ extension RecipesTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let recipeDetail = recipeData?.hits[indexPath.row].recipe
-        recipeRepresentable = RecipeRepresentable(name: recipeDetail?.label ?? "", imageData: recipeDetail?.image.data, ingredients: recipeDetail?.ingredientLines ?? [], url: recipeDetail?.url ?? "", score: String(recipeDetail?.yield ?? 0), totalTime: recipeDetail?.totalTime.timeFormater() ?? "")
+        recipeRepresentable = RecipeRepresentable(name: recipeDetail?.label ?? "", imageData: recipeDetail?.image.data, ingredients: recipeDetail?.ingredientLines ?? [], url: recipeDetail?.url ?? "", score: recipeDetail?.yield.formatUsingAbbrevation() ?? "", totalTime: recipeDetail?.totalTime.convertTime ?? "")
         performSegue(withIdentifier: "segueToRecipeDetail", sender: self)
     }
 }

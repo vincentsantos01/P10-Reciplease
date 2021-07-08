@@ -8,7 +8,7 @@
 import UIKit
 
 class RecipesSearchViewController: UIViewController {
-
+    
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var ingredientsTableView: UITableView! { didSet { ingredientsTableView.tableFooterView = UIView() }}
     @IBOutlet weak var searchButton: UIButton!
@@ -16,7 +16,7 @@ class RecipesSearchViewController: UIViewController {
     @IBOutlet weak var clearButton: UIButton!
     
     
-
+    
     var recipeService = RecipeService()
     var recipeData: RecipeData?
     var ingredients = [String]()
@@ -66,11 +66,11 @@ class RecipesSearchViewController: UIViewController {
         clearButton.clipsToBounds = true
     }
     
-   
+    
     func getRecipes() {
         if ingredients.isEmpty {
             presentAlert(titre: "oups", message: "Please enter 1 ingredients at least")
-             } else {
+        } else {
             recipeService.getRecipes(ingredientList: ingredients.joined(separator: ",")) { result in
                 DispatchQueue.main.async {
                     switch result {
@@ -125,5 +125,5 @@ extension RecipesSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return ingredients.isEmpty ? 200 : 0
     }
-
+    
 }

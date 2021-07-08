@@ -27,7 +27,7 @@ struct Recipe: Decodable {
     let source: String
     let url: String
     let shareAs: String
-    let yield: Int
+    let yield: Double
     let dietLabels, healthLabels: [String]
     let ingredientLines: [String]
     let ingredients: [Ingredient]

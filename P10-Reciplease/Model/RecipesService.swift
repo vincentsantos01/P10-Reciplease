@@ -14,15 +14,15 @@ enum EdamamError: Error {
 
 final class RecipeService: EncoderUrl {
     
-
+    
     private let session: AlamoSession
     
- 
+    
     init(session: AlamoSession = RecipeSession()) {
         self.session = session
     }
     
-
+    
     func getRecipes(ingredientList: String, callback: @escaping (Result<RecipeData, Error>) -> Void) {
         guard let baseUrl = URL(string: "https://api.edamam.com/search?") else { return }
         

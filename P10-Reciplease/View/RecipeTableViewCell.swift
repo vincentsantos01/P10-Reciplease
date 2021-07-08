@@ -21,14 +21,13 @@ class RecipeTableViewCell: UITableViewCell {
             guard let url = URL(string: recipe?.recipe.image ?? "recipe picture") else {return}
             recipeImageView.load(url: url)
             recipeTitle.text = recipe?.recipe.label
-            //recipeIngredients.text = recipe?.recipe.ingredients[0].text
-            cookingTimeLabel.text = recipe?.recipe.totalTime.timeFormater()
-            let score = recipe?.recipe.yield
-            if score == 0 {
-                yieldLabel.text = "?"
+            let times = recipe?.recipe.totalTime.convertTime
+            if times == "0mn" {
+                cookingTimeLabel.text = "----"
             } else {
-                yieldLabel.text = "\(score ?? 0) people"
+                cookingTimeLabel.text = "\(times ?? "----")"
             }
+            self.yieldLabel.text = "\(Int(recipe!.recipe.yield).formatUsingAbbrevation())Yield"
         }
     }
     
@@ -37,12 +36,10 @@ class RecipeTableViewCell: UITableViewCell {
             guard let image = favoriteRecipe?.image else { return }
             recipeImageView.image = UIImage(data: image)
             recipeTitle.text = favoriteRecipe?.name
-
-        //guard let time = Int(favoriteRecipe?.totalTime ?? "") else { return }
-            guard let time = favoriteRecipe?.totalTime else { return }
-            cookingTimeLabel.text = "\(time)"
-            guard let score = favoriteRecipe?.score else { return }
-            yieldLabel.text = "\(score)"
+            let times = favoriteRecipe?.totalTime ?? "0"
+            cookingTimeLabel.text = "\(times)"
+            let score = favoriteRecipe?.score ?? "0"
+            yieldLabel.text = "\(score)Yield"
         }
     }
     
