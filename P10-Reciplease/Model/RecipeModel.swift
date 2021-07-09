@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct RecipeData: Decodable {
     let q: String
     let from, to: Int
@@ -15,11 +14,9 @@ struct RecipeData: Decodable {
     let count: Int
     let hits: [Hit]
 }
-
 struct Hit: Decodable {
     let recipe: Recipe
 }
-
 struct Recipe: Decodable {
     let uri: String
     let label: String
@@ -35,7 +32,6 @@ struct Recipe: Decodable {
     let totalTime: Int
     let totalNutrients, totalDaily: [String: Total]
 }
-
 enum Unit: String, Codable {
     case empty = "%"
     case g = "g"
@@ -44,14 +40,10 @@ enum Unit: String, Codable {
     case mg = "mg"
     case µg = "µg"
 }
-
-
 struct Ingredient: Decodable {
     let text: String
     let weight: Double
 }
-
-
 struct Total: Decodable {
     let label: String
     let quantity: Double

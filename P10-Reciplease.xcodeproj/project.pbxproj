@@ -82,7 +82,6 @@
 		E40231342668011500AD52FB /* P10_Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = P10_Reciplease.xcdatamodel; sourceTree = "<group>"; };
 		E40231362668011600AD52FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E40231392668011600AD52FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E402313B2668011600AD52FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40231402668011600AD52FB /* P10-RecipleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "P10-RecipleaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40231442668011600AD52FB /* RecipeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServiceTests.swift; sourceTree = "<group>"; };
 		E40231462668011600AD52FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,8 +179,6 @@
 				E402315E2668B38800AD52FB /* View */,
 				E402315F2668B39400AD52FB /* Coontroller */,
 				E4215EF0266A0DD100853BE1 /* SupportingFiles */,
-				E40231362668011600AD52FB /* Assets.xcassets */,
-				E402313B2668011600AD52FB /* Info.plist */,
 			);
 			path = "P10-Reciplease";
 			sourceTree = "<group>";
@@ -240,6 +237,7 @@
 		E4215EF0266A0DD100853BE1 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E40231362668011600AD52FB /* Assets.xcassets */,
 				E402312C2668011500AD52FB /* SceneDelegate.swift */,
 				E402312A2668011500AD52FB /* AppDelegate.swift */,
 			);
