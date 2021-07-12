@@ -67,7 +67,7 @@ class RecipeDetailViewController: UIViewController {
         guard let recipeRepresentable = recipeRepresentable else { return }
         coreDataManager?.addToFavoriteList(name: recipeRepresentable.name, ingredients: recipeRepresentable.ingredients, totalTime: recipeRepresentable.totalTime, score: recipeRepresentable.score, recipeUrl: recipeRepresentable.url, image: recipeRepresentable.imageData)
     }
-    
+/// Methode qi permet de retirer de coreData la recette suprimée des favoris
     func deleteRecipeFromFavorites() {
         coreDataManager?.deleteFromFavoriteList(name: recipeTitleLabel.text ?? "")
     }
