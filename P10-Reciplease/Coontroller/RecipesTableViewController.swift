@@ -50,7 +50,7 @@ extension RecipesTableViewController: UITableViewDataSource {
     }
 }
 
-
+/// Methode qui permet de redimentioner la cell du xib pour affichage
 extension RecipesTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

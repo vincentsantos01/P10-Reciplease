@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Methode qui permet d'arrondir un double ainsi que de formatier la valeur time
 extension Int {
     
     var convertTime: String {
@@ -50,7 +51,7 @@ extension Int {
         return newValue
     }
 }
-
+/// Methode qui permet d'arrondir un double ainsi que de formatier la valeur time
 extension Double {
     func formatUsingAbbrevation () -> String {
         let numFormatter = NumberFormatter()

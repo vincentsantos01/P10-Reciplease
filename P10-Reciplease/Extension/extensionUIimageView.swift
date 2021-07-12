@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Methode qui permets de transformer une image en data
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in

@@ -74,7 +74,7 @@ extension FavoritesTableViewController: UITableViewDelegate {
             favoriteTableView.reloadData()
         }
     }
-    
+/// Methode qui permet de placer un placeholder en cas de liste vide
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = "Add some recipe in your Favorites"
@@ -87,7 +87,7 @@ extension FavoritesTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return coreDataManager?.favoritesRecipe.isEmpty ?? true ? 200 : 0
     }
-    
+/// Methode qui permet de redimentioner la cell du xib pour affichage
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }

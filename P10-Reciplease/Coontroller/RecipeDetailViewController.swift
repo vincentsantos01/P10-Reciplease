@@ -45,7 +45,7 @@ class RecipeDetailViewController: UIViewController {
         }
     }
     
-    
+/// Methode qui permet de mettre a jour les informations de l'appel réseau
     func updateRecipe() {
         
         guard let recipeRepresentable = recipeRepresentable else { return }
@@ -62,7 +62,7 @@ class RecipeDetailViewController: UIViewController {
         guard let image = recipeRepresentable.imageData else { return }
         recipeImageView.image = UIImage(data: image)
     }
-    
+/// Methode qui permet de passer les valeurs de l'appel réseau dans coreData
     func addRecipeToFavorite() {
         guard let recipeRepresentable = recipeRepresentable else { return }
         coreDataManager?.addToFavoriteList(name: recipeRepresentable.name, ingredients: recipeRepresentable.ingredients, totalTime: recipeRepresentable.totalTime, score: recipeRepresentable.score, recipeUrl: recipeRepresentable.url, image: recipeRepresentable.imageData)

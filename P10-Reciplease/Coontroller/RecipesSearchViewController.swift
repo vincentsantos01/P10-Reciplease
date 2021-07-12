@@ -9,13 +9,15 @@ import UIKit
 
 class RecipesSearchViewController: UIViewController {
     
+/// Outlets
+    
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var ingredientsTableView: UITableView! { didSet { ingredientsTableView.tableFooterView = UIView() }}
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
-    
+/// Parametres
     
     var recipeService = RecipeService()
     var recipeData: RecipeData?
@@ -42,6 +44,7 @@ class RecipesSearchViewController: UIViewController {
         getRecipes()
     }
     
+/// Methode qui permet d'ajouter les ingrédients du textField vers la TableView
     func addIngredient() {
         guard let ingredientName = searchTextField.text else { return }
         if ingredientName.isBlank || ingredientName.isNumeric {
@@ -57,6 +60,7 @@ class RecipesSearchViewController: UIViewController {
         recipesList.recipeData = recipeData
     }
     
+/// Methode qui permet d'arrondir les boutons
     func styles() {
         searchButton.layer.cornerRadius = 10
         searchButton.clipsToBounds = true
@@ -66,7 +70,7 @@ class RecipesSearchViewController: UIViewController {
         clearButton.clipsToBounds = true
     }
     
-    
+/// Methode qui permet de lancer la recherche avec les ingrédients sélectionnés
     func getRecipes() {
         if ingredients.isEmpty {
             presentAlert(titre: "oups", message: "Please enter 1 ingredients at least")
@@ -112,7 +116,7 @@ extension RecipesSearchViewController: UITableViewDelegate {
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
-    
+/// Methode qui permet de placer un placeholder en cas de liste vide
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = "Add some ingredients in the list"
